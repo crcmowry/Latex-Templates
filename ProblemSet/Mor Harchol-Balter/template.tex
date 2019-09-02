@@ -1,0 +1,103 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{typearea}
+\paperwidth 8.5in \paperheight 11in
+\typearea{15}
+
+\usepackage{latexsym,graphicx}
+\usepackage{amsmath,amssymb,enumerate}
+\usepackage{amsthm}
+
+\usepackage{xspace}
+%\usepackage[showonlyrefs,showmanualtags]{mathtools}
+\usepackage{bm}
+\usepackage{ifpdf}
+\usepackage{shadow,shadethm,color}
+\usepackage[compact]{titlesec}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+%\numberwithin{algorithm}{section}
+\usepackage{subfigure}
+\usepackage{verbatim}
+%\usepackage{times}
+\usepackage{paralist}
+
+\usepackage{enumerate}
+\usepackage{changepage}
+
+
+\allowdisplaybreaks
+
+\definecolor{Darkblue}{rgb}{0,0,0.4}
+\definecolor{Brown}{cmyk}{0,0.81,1.,0.60}
+\definecolor{Purple}{cmyk}{0.45,0.86,0,0}
+\newcommand{\mydriver}{hypertex}
+\ifpdf
+ \renewcommand{\mydriver}{pdftex}
+\fi
+\usepackage[breaklinks,\mydriver]{hyperref}
+\hypersetup{colorlinks=true,%pdfborder={1 1 1 [3]},%
+            citebordercolor={.6 .6 .6},linkbordercolor={.6 .6 .6},%
+citecolor=Darkblue,urlcolor=black,linkcolor=Darkblue}
+\newcommand{\lref}[2][]{\hyperref[#2]{#1~\ref*{#2}}}
+
+\makeatletter
+ \setlength{\parindent}{0pt}
+ \addtolength{\partopsep}{-2mm}
+ \setlength{\parskip}{5pt plus 1pt}
+ %\addtolength{\theorempreskipamount}{-1mm}
+ %\addtolength{\theorempostskipamount}{-1mm}
+ \addtolength{\abovedisplayskip}{-3mm}
+ \addtolength{\textheight}{45pt}
+ \addtolength{\footskip}{-10pt}
+\makeatother
+
+\newcommand{\homework}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf 15-359/659: Probability and Computing} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill Homework #1  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em Name: #3 \hfill} }
+       \vspace{1mm}
+      \hbox to 5.78in { {\em Andrew ID: #4 \hfill} }
+      \vspace{1mm}
+      \hbox to 5.78in { {\em Collaborators: #5 \hfill} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+%\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{Scribe: #4}{Lecture #1}}
+
+% Useful macros
+\newcommand{\E}{\mathbb{E}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\homework{1}{September 6, 2013}{David Witmer}{dwitmer}{Jacob Bernoulli, Sim\'{e}on Denis Poisson}
+
+{\Large \bf 1}
+\begin{enumerate}[(a)]
+\item
+From class, recall that for a discrete random variable $X$ taking on values $x_1,x_2,\ldots$, the expected value of $X$ is 
+\[
+\E[X] = \sum_{i = 1}^{\infty} x_i p_X(x_i).
+\]
+
+\item
+On the other hand, for a continuous random variable $X$, the expected value is
+\[
+\E[X] = \int_{-\infty}^{\infty} x f_X(x)\,dx.
+\]
+
+\end{enumerate}
+\end{document}
